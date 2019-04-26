@@ -40,12 +40,13 @@ function checkStatus(){
 
     if (!isPlaying && time === 0){
         message.innerHTML = 'Game Over!';
+        score = -1;
     }
 }
 
 function startMatch(){
 
-    let scoreDisplay = document.querySelector(#score);
+    let scoreDisplay = document.querySelector('#score');
     if (matchWords()){
         isPlaying = true;
         time = 6;
@@ -53,7 +54,12 @@ function startMatch(){
         wordInput.value = '';
         score++;
     }
-    scoreDisplay.innerHTML = score;
+
+    if (score === -1){
+        scoreDisplay.innerHTML = 0;
+    } else {
+        scoreDisplay.innerHTML = score;
+    }
 }
 
 function matchWords(){
