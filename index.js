@@ -2,7 +2,7 @@ let time = 5;
 let score = 0;
 let isPlaying;
 let words = ['instrument', 'index', 'hardship',
-    'asylum', 'detective'];
+    'asylum', 'detective', 'threshold', 'broken', 'articulate'];
 let wordInput = document.querySelector('#word-input');
 let currentWord = document.querySelector('#current-word');
 let message = document.querySelector('#message');
