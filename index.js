@@ -1,15 +1,14 @@
-let time = 5;
+let time = '0';
 let score = 0;
 let isPlaying;
 let words = ['instrument', 'index', 'hardship',
     'asylum', 'detective', 'threshold', 'broken', 'articulate'];
-let wordInput = document.querySelector('#word-input');
-let currentWord = document.querySelector('#current-word');
+let wordInput = document.querySelector('#wordInput');
+let currentWord = document.querySelector('#currentWord');
 let message = document.querySelector('#message');
 window.addEventListener('load', init);
 
 function init(){
-
     showWord(words);
     wordInput.addEventListener('input', startMatch);
     setInterval(countdown, 1000);
@@ -17,10 +16,7 @@ function init(){
 }
 
 function showWord(words){
-    //fix this bit
-
     let randIndex = Math.floor(Math.random() * words.length);
-
     currentWord.innerHTML = words[randIndex];
 }
 
@@ -36,10 +32,9 @@ function countdown(){
 }
 
 function checkStatus(){
-
-
     if (!isPlaying && time === 0){
         message.innerHTML = 'Game Over!';
+        message.style = 'color: red';
         score = -1;
     }
 }
@@ -65,9 +60,17 @@ function startMatch(){
 function matchWords(){
     if(wordInput.value === currentWord.innerHTML){
         message.innerHTML = 'Correct!';
+        message.style = 'color: green';
+
         return true;
     } else {
         message.innerHTML = '';
         return false;
+    }
+}
+
+function preventMessage(){
+    if(!startMatch()){
+        message.innerHTML = '';
     }
 }
