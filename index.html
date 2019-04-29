@@ -7,6 +7,7 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+<div class="overall">
 <div class="container">
 
     <div class="timeScore">
@@ -17,7 +18,7 @@
             <span id="score">0</span>
         </h3>
     </div>
-    <h2 id="currentWord" class="wordDisplay">Hello</h2>
+    <h2 id="currentWord" class="wordDisplay"></h2>
 
     <h4 id="message"></h4>
 
@@ -26,9 +27,12 @@
     <input id="wordInput" class="inputField" type="text" placeholder="insert text" autofocus>
     <div class="instructions">
         <h5>Instructions</h5>
-        <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score
-            will reset</p>
+        <p>To start the game, simply type the word that is given.
+        You must type the given word within the time limit.
+            After the game is over, type the current word to play again.
+        </p>
     </div>
+</div>
 </div>
 </body>
 </html>
