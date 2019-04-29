@@ -6,19 +6,23 @@ body {
     text-align: center;
     margin: 0;
     font-family: Helvetica, sans-serif;
+
+}
+
+.overall {
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 1200px;
 }
-
 .container {
     margin: 0 auto;
-    height: 500px;
+    height: 700px;
 }
 
 .wordDisplay {
-    margin: 0;
+    margin-top: 50px;
     font-size: 75px;
 }
 
@@ -32,14 +36,14 @@ body {
 }
 
 h4 {
-    margin: 0;
+    margin-top: 50px;
     padding: 0;
     font-size: 36px;
 }
 
 h3 {
     margin: 0;
-    padding: 20px 0 20px 0;
+    padding: 0 0 20px 0;
     font-size: 36px;
 }
 
@@ -66,4 +70,19 @@ h3 {
     height: 50px;
     text-align:center;
     font-size: 24px;
+}
+
+/*@media only screen and (max-width:500px) {*/
+    /*.instructions {*/
+
+    /*}*/
+
+/*}*/
+
+/*ask charlie*/
+@media only screen and (max-width:500px) {
+    .instructions h5{
+        display: block;
+        color: red;
+    }
 }
