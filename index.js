@@ -1,15 +1,19 @@
-let time = 5;
+let time = '0';
 let score = 0;
 let isPlaying;
+// will make this more dynamic by using an API in the future
 let words = ['instrument', 'index', 'hardship',
-    'asylum', 'detective'];
-let wordInput = document.querySelector('#word-input');
-let currentWord = document.querySelector('#current-word');
+    'asylum', 'detective', 'threshold', 'broken', 'articulate', 'correspondence',
+'fascinate', 'brilliance', 'accountant', 'marathon', 'announcement', 'variation',
+'inspiration', 'clearance', 'transform', 'elaborate', 'competition', 'reproduction',
+'psychology', 'productive', 'objective', 'interface', 'disturbance', 'negotiation',
+'goalkeeper', 'retirement', 'acceptable', 'rehearsal', 'nomination', 'motorcycle'];
+let wordInput = document.querySelector('#wordInput');
+let currentWord = document.querySelector('#currentWord');
 let message = document.querySelector('#message');
 window.addEventListener('load', init);
 
 function init(){
-
     showWord(words);
     wordInput.addEventListener('input', startMatch);
     setInterval(countdown, 1000);
@@ -17,15 +21,11 @@ function init(){
 }
 
 function showWord(words){
-    //fix this bit
-
     let randIndex = Math.floor(Math.random() * words.length);
-
     currentWord.innerHTML = words[randIndex];
 }
 
 function countdown(){
-
     let timeDisplay = document.querySelector('#time')
     if (time > 0){
         time--;
@@ -36,16 +36,14 @@ function countdown(){
 }
 
 function checkStatus(){
-
-
     if (!isPlaying && time === 0){
         message.innerHTML = 'Game Over!';
+        message.style = 'color: red';
         score = -1;
     }
 }
 
 function startMatch(){
-
     let scoreDisplay = document.querySelector('#score');
     if (matchWords()){
         isPlaying = true;
@@ -65,6 +63,8 @@ function startMatch(){
 function matchWords(){
     if(wordInput.value === currentWord.innerHTML){
         message.innerHTML = 'Correct!';
+        message.style = 'color: green';
+
         return true;
     } else {
         message.innerHTML = '';

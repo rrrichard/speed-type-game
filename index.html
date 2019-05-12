@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Speed Typer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="index.js" defer></script>
 </head>
 <body>
-<header>
-    <h1>WordBeater</h1>
-</header>
-
-
+<div class="overall">
 <div class="container">
-    <h2 id="current-word" class="wordDisplay">Hello
-    </h2>
-    <input id="word-input" class="" type="text" placeholder="insert text" autofocus>
-    <h4 id="message"></h4>
+
     <div class="timeScore">
-        <h3>Time Left:
-         <span id="time">0</span>
-        </h3>
+        <h4>Time Left:
+            <span id="time">0</span>
+        </h4>
         <h3>Score:
             <span id="score">0</span>
         </h3>
     </div>
-    <div class="instructions">
-        <h5>Instructions</h5>
-        <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score
-            will reset</p>
-    </div>
+    <h2 id="currentWord" class="wordDisplay"></h2>
+
+    <h4 id="message"></h4>
 
 </div>
-
+<div class="input">
+    <input id="wordInput" class="inputField" type="text" placeholder="insert text" autofocus>
+    <div class="instructions">
+        <h5>Instructions</h5>
+        <p>To start the game, simply type the word that is given.
+        You must type the given word within the time limit.
+            After the game is over, type the current word to play again.
+        </p>
+    </div>
+</div>
+</div>
 </body>
 </html>
